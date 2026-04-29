@@ -1,89 +1,191 @@
-# 📉 Your Data Is Talking… Most Businesses Just Don’t Listen
-
-Hi, I'm Mohd Walid Ansari 👋  
-
-I turn messy data into clear, actionable business decisions.
+# 📊 E-Commerce Business Intelligence & Logistics Analytics
+### Transforming 100K+ Transactions into Actionable Retention Strategies
 
 ---
 
-## 🤔 Here’s What I’ve Noticed
-
-Companies track:
-- Revenue 📈  
-- Orders 🛒  
-- Customers 👥  
-
-But still struggle to answer:
-
-- Why are customers not coming back?  
-- What’s actually driving revenue?  
-- Where are we losing money without noticing?  
-
-👉 That’s where I come in.
+## 📑 Table of Contents
+1. [📖 Project Overview](#-project-overview)
+2. [🎯 Business Problem & Objectives](#-business-problem--objectives)
+3. [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
+4. [⚙️ Data Engineering & SQL Intelligence](#️-data-engineering--sql-intelligence)
+5. [📈 Statistical Validation of Key Insights](#-statistical-validation-of-key-insights)
+6. [📊 Visual Intelligence (Dashboards)](#-visual-intelligence-dashboards)
+7. [🔍 Key Business Insights](#-key-business-insights)
+8. [📌 Business Impact & Strategic Recommendations](#-business-impact--strategic-recommendations)
+9. [🚀 Conclusion](#-conclusion)
+10. [📁 Repository Structure](#-repository-structure)
+11. [👨‍💻 Author & Contact](#-author--contact)
 
 ---
 
-## 🔍 How I Solve Problems
-
-I don’t just “analyze data”
-
-I:
-- Break business problems into measurable questions  
-- Use SQL & Python to uncover patterns  
-- Validate insights using statistics  
-- Turn findings into dashboards decision-makers can use  
+## 📖 Project Overview
+Most e-commerce businesses focus on **customer acquisition**, but revenue growth can often mask deep-rooted operational inefficiencies. Using the **Brazilian Olist dataset (100K+ records)**, I developed an end-to-end analytics ecosystem that moves from raw data engineering to executive-level intelligence. By connecting logistics performance directly to customer satisfaction and financial value, this project provides a data-driven roadmap to shift a business from **leaky-bucket growth** to **sustainable retention.**
 
 ---
 
-## 📊 A Problem I Recently Solved
+## 🎯 Business Problem & Objectives
+High-growth platforms often struggle to answer critical questions that affect the bottom line. This project was designed to solve:
+* **The Retention Paradox:** Why are ~96% of customers one-time buyers despite steady revenue?
+* **Logistics Friction:** To what extent do delivery delays damage brand equity and review scores?
+* **Financial Leakage:** Where are the opportunities to increase Average Order Value (AOV) through payment behavior?
+* **Operational Health:** How can we visualize complex fulfillment cycles into a simple decision-support system?
 
-**“Why are customers not returning?”**
-
-Using 100K+ e-commerce records, I found:
-
-- ~96% customers were one-time buyers  
-- Delivery delays significantly reduced customer satisfaction  
-- Revenue growth was misleading (driven mostly by new users)  
-
-👉 This shifted the focus from *growth → retention strategy*
-
----
-
-## 🧠 What Makes Me Different
-
-Most candidates say:
-> “I know Python, SQL, Power BI”
-
-I focus on:
-> “What problem are we solving and why does it matter?”
+**Primary Objectives:**
+1.  Analyze **revenue trends and growth patterns** to identify peak performance periods.
+2.  Evaluate **delivery performance** and quantify its direct impact on customer satisfaction.
+3.  Understand **customer behavior** to identify homogeneous segments for targeted loyalty strategies.
+4.  Build **decision-support systems** that transform raw data into visual strategy.
 
 ---
 
-## ⚙️ Tools I Use
-
-- SQL (BigQuery)  
-- Python (Pandas, NumPy, Matplotlib)  
-- Power BI  
-- Statistics & Hypothesis Testing  
-
----
-
-## 🚀 What You’ll Notice on My GitHub
-
-- Business-focused case studies  
-- End-to-end analytics workflows  
-- Clean, structured problem-solving approach  
-- Insights that drive decisions, not just dashboards  
+## 🛠️ Tech Stack & Tools
+* **SQL (Google BigQuery):** Advanced data transformation, view orchestration, and business logic implementation.
+* **Python (Pandas, Matplotlib, Seaborn, SciPy):** Exploratory Data Analysis (EDA) and rigorous statistical testing.
+* **Power BI:** Professional dashboard development for executive and operational stakeholders.
+* **Jupyter Notebook / Colab:** Research documentation and reproducible analysis.
 
 ---
 
-## 🤝 Let’s Connect
+## ⚙️ Data Engineering & SQL Intelligence
+Instead of performing analysis on raw, fragmented tables, I engineered a robust **Business Intelligence Layer** in BigQuery.
 
-If you're looking for someone who can:
+* **Modular Data Orchestration:** Created dedicated SQL views for **Delivery, Revenue, Reviews, and Payments** to isolate key business domains.
+* **Unified Master Layer:** Joined 5+ relational tables into a consolidated `master_orders_features` dataset for high-speed analysis.
+* **Metric Engineering:** Used SQL to derive complex KPIs including **Delivery Precision** (Actual vs. Estimated), **Late Delivery Flags**, and **High-Value Order** categorization.
+* **Cohort Identification:** Implemented logic to track customer acquisition trends and distinguish between first-time and returning users.
 
-✔ Turn data into decisions  
-✔ Think in terms of business impact  
-✔ Go beyond dashboards  
+---
 
-📧 Email: walidmohd2532001@gmail.com  
-🔗 LinkedIn: https://www.linkedin.com/in/mohdwalidansari
+## 📈 Statistical Validation of Key Insights
+I used Python to move beyond observation, applying statistical methods to ensure all findings were mathematically significant (p < 0.05).
+
+1.  **Logistics vs. Satisfaction:** Proved via hypothesis testing that late deliveries correlate with a **~2.0 point drop** in review scores.
+2.  **Revenue Drivers:** Identified that **Credit Card users** have a **~21 BRL higher AOV** compared to other payment types (Validated via ANOVA).
+3.  **Revenue Correlation:** Found a **moderate correlation (~0.49)** between order value and freight cost, highlighting significant shipping price sensitivity among customers.
+4.  **The Retention Gap:** Discovered that **96% of the 100K+ customers** are one-time buyers, identifying a critical failure in the post-purchase funnel.
+5.  **Behavioral Distribution:** Performed deep EDA to map the distribution of order values and delivery delay patterns across different regions.
+
+---
+
+## 📊 Visual Intelligence (Dashboards)
+I translated complex datasets into four strategic Power BI dashboards to drive data-informed decision-making.
+
+### 1️⃣ Executive Overview
+Focuses on core KPIs: Revenue, Total Orders, AOV, and the Late Delivery % rate.
+![Executive Overview](images/dashboard/01_executive_overview.jpg)
+
+### 2️⃣ Revenue & Growth Trends
+Analyzes monthly revenue growth and provides Year-over-Year (YoY) comparisons.
+![Revenue Trends](images/dashboard/02_revenue_trends.jpg)
+
+### 3️⃣ Customer Behavior Insights
+Visualizes customer distribution, order value patterns, and the retention gap.
+![Customer Insights](images/dashboard/03_customer_insights.jpg)
+
+### 4️⃣ Delivery & Operational Performance
+Evaluates delivery efficiency metrics and their direct impact on customer ratings.
+![Delivery Performance](images/dashboard/04_delivery_performance.jpg)
+
+---
+
+## 🔍 Key Business Insights
+* **Retention Warning:** Approximately **96% of customers (90K+) are one-time buyers**, indicating a critical lack of post-purchase engagement.
+* **Credit Card Value:** Credit cards aren't just a payment method; they are a driver of higher-value purchases, suggesting that optimizing payment partnerships could directly increase AOV.
+* **Logistics is Marketing:** Customer satisfaction is driven more by **delivery speed** than product price; a single day of delay has a measurable negative impact on brand perception.
+* **Seasonal Stability:** While 2017 showed explosive growth, 2018 showed stabilization, suggesting the market is maturing and requires a shift toward efficiency.
+
+---
+
+## 📌 Business Impact & Strategic Recommendations
+
+By integrating SQL engineering with statistical rigor, this project transitioned from raw data analysis to a strategic diagnostic tool, delivering the following impacts and actionable roadmaps:
+
+### 🚀 Business Impact
+* **Identified a Critical Retention Gap:** Exposed that **96% of the 100K+ customers** are one-time buyers, proving that current revenue growth is unsustainably dependent on new acquisition rather than brand loyalty.
+* **Quantified Operational Loss:** Statistically linked logistics to brand equity, proving that delivery delays cause a measurable **2.0 point drop** in customer satisfaction scores.
+* **Unlocked Revenue Drivers:** Discovered that specific payment behaviors (Credit Cards) correlate with a **~21 BRL increase** in Average Order Value (AOV).
+* **Optimized Decision-Making:** Developed a unified Business Intelligence layer that tracks **5+ real-time KPIs**, reducing the time required for executive performance reviews.
+
+### 💡 Strategic Recommendations
+1.  **Pivot to Retention Marketing:** Shift budget from cold acquisition to loyalty-driven campaigns (e.g., personalized "Welcome Back" offers) to convert the 96% one-time buyer base into repeat customers.
+2.  **Optimize Fulfillment Benchmarks:** Focus logistics improvements on reducing the "Actual vs. Estimated" delivery gap, as this specific metric is the primary driver of negative reviews.
+3.  **Incentivize High-Value Payments:** Since credit card users spend significantly more, implement targeted promotions or cashback rewards for credit transactions to naturally lift the platform's overall AOV.
+4.  **Regional Freight Strategy:** Adjust shipping subsidies or carrier partnerships in regions with high freight-to-order-value correlations (~0.49) to reduce price sensitivity and cart abandonment.
+
+---
+
+## 🚀 Conclusion
+This project demonstrates that **Data Analytics is not just about counting things—it’s about weighing them.** By connecting SQL engineering with statistical rigor and visual storytelling, I was able to:
+* 📉 **Expose** the hidden retention problem behind positive growth numbers.
+* 🚚 **Quantify** the financial cost of operational delays.
+* 💳 **Identify** the specific customer behaviors that drive higher revenue.
+* 🛠️ **Build** a repeatable framework that turns raw transactional logs into a strategic roadmap.
+
+---
+
+## 📁 Repository Structure
+```
+ecommerce-analytics-project/
+│
+├── data/
+│   ├── raw/                         # ignored
+│   ├── processed/
+│   │   └── master_orders_features.csv
+│   └── analytics/
+│       ├── 07_01_revenue_trend.csv
+│       ├── 07_02_delivery_performance.csv
+│       ├── 07_03_customer_retention.csv
+│       └── 07_04_cohort_analysis.csv
+│
+├── sql/
+│   ├── 01_create_delivery_view.sql
+│   ├── 02_create_revenue_view.sql
+│   ├── 03_create_review_view.sql
+│   ├── 04_create_payment_view.sql
+│   ├── 05_create_master_table.sql
+│   ├── 06_feature_engineering.sql
+│   ├── 07_01_revenue_trend.sql
+│   ├── 07_02_delivery_performance.sql
+│   ├── 07_03_customer_retention.sql
+│   ├── 07_04_cohort_analysis.sql
+│   └── 08_export_master_orders_features.sql
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_hypothesis_testing.ipynb
+│   └── 03_sql_business_analysis.ipynb
+│
+├── dashboard/
+│   ├── olist_dashboard.pbix
+│   ├── Business_Performance_Dashboard.pptx
+│   └── olist_dashboard.pdf
+│
+├── images/
+│   ├── sql_outputs/                 # from BigQuery 
+│   │   ├── 07_01_revenue_trend.png
+│   │   ├── 07_02_delivery_performance.png
+│   │   ├── 07_03_customer_retention.png
+│   │   └── 07_04_cohort_analysis.png
+│   │
+│   └── dashboard/                  # Power BI screenshots
+│       ├── 01_executive_overview.jpg
+│       ├── 02_revenue_trends.jpg
+│       ├── 03_customer_insights.jpg
+│       └── 04_delivery_performance.jpg
+│
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
+---
+
+## 👨‍💻 Author & Contact
+**Mohd Walid Ansari**
+*Data Analyst | Problem Solver*
+
+* **Email:** [walidmohd2532001@gmail.com](mailto:walidmohd2532001@gmail.com)
+* **LinkedIn:** [Mohd Walid Ansari](https://linkedin.com/in/mohd-walid-ansari-8982362b5/)
+* **GitHub:** [@mohdwalid253](https://github.com/mohdwalid253)
+
+---
+⭐ *If you find this project insightful, feel free to star the repository!*
