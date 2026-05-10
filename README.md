@@ -9,17 +9,20 @@
 3. [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
 4. [⚙️ Data Engineering & SQL Intelligence](#️-data-engineering--sql-intelligence)
 5. [📈 Statistical Validation of Key Insights](#-statistical-validation-of-key-insights)
-6. [📊 Visual Intelligence (Dashboards)](#-visual-intelligence-dashboards)
-7. [🔍 Key Business Insights](#-key-business-insights)
-8. [📌 Business Impact & Strategic Recommendations](#-business-impact--strategic-recommendations)
-9. [🚀 Conclusion](#-conclusion)
-10. [📁 Repository Structure](#-repository-structure)
-11. [👨‍💻 Author & Contact](#-author--contact)
+6. [🤖 Predictive Churn Modeling](#-predictive-churn-modeling)
+7. [📊 Visual Intelligence (Dashboards)](#-visual-intelligence-dashboards)
+8. [🔍 Key Business Insights](#-key-business-insights)
+9. [📌 Business Impact & Strategic Recommendations](#-business-impact--strategic-recommendations)
+10. [🚀 Conclusion](#-conclusion)
+11. [📁 Repository Structure](#-repository-structure)
+12. [👨‍💻 Author & Contact](#-author--contact)
 
 ---
 
 ## 📖 Project Overview
 Most e-commerce businesses focus on **customer acquisition**, but revenue growth can often mask deep-rooted operational inefficiencies. Using the **Brazilian Olist dataset (100K+ records)**, I developed an end-to-end analytics ecosystem that moves from raw data engineering to executive-level intelligence. By connecting logistics performance directly to customer satisfaction and financial value, this project provides a data-driven roadmap to shift a business from **leaky-bucket growth** to **sustainable retention.**
+
+The project was further extended with a machine learning-based churn prediction framework using Random Forest modeling to identify high-risk customers and simulate retention intervention strategies.
 
 ---
 
@@ -35,12 +38,13 @@ High-growth platforms often struggle to answer critical questions that affect th
 2.  Evaluate **delivery performance** and quantify its direct impact on customer satisfaction.
 3.  Understand **customer behavior** to identify homogeneous segments for targeted loyalty strategies.
 4.  Build **decision-support systems** that transform raw data into visual strategy.
+5. Develop a predictive churn analytics pipeline to identify at-risk customers and estimate retention opportunities.
 
 ---
 
 ## 🛠️ Tech Stack & Tools
 * **SQL (Google BigQuery):** Advanced data transformation, view orchestration, and business logic implementation.
-* **Python (Pandas, Matplotlib, Seaborn, SciPy):** Exploratory Data Analysis (EDA) and rigorous statistical testing.
+* **Python (Pandas, Matplotlib, Seaborn, SciPy, Scikit-learn):** Exploratory Data Analysis (EDA) and rigorous statistical testing.
 * **Power BI:** Professional dashboard development for executive and operational stakeholders.
 * **Jupyter Notebook / Colab:** Research documentation and reproducible analysis.
 
@@ -65,6 +69,23 @@ I used Python to move beyond observation, applying statistical methods to ensure
 4.  **The Retention Gap:** Discovered that **96% of the 100K+ customers** are one-time buyers, identifying a critical failure in the post-purchase funnel.
 5.  **Behavioral Distribution:** Performed deep EDA to map the distribution of order values and delivery delay patterns across different regions.
 
+---
+## 🤖 Predictive Churn Modeling
+
+To move beyond descriptive analytics, the project was extended into a machine learning-based customer churn prediction framework.
+
+### Modeling Workflow
+* Engineered customer-level behavioral features from transactional ecommerce data
+* Applied temporal train-test separation to prevent future information leakage
+* Built a Random Forest classification model to predict customer churn risk
+* Evaluated model performance using Accuracy, Recall, F1-score, and ROC-AUC metrics
+* Simulated retention intervention strategies using predicted churn probabilities
+
+### Key Predictive Insights
+* Operational variables such as delivery performance and freight cost emerged as the strongest churn drivers
+* The model identified **12K+ high-risk customers** for potential retention targeting
+* Simulated retention campaigns demonstrated projected churn reduction opportunities of approximately **15%**
+* Estimated retention simulations suggested potential protection of approximately 384K BRL in customer revenue
 ---
 
 ## 📊 Visual Intelligence (Dashboards)
@@ -105,6 +126,7 @@ By integrating SQL engineering with statistical rigor, this project transitioned
 * **Quantified Operational Loss:** Statistically linked logistics to brand equity, proving that delivery delays cause a measurable **2.0 point drop** in customer satisfaction scores.
 * **Unlocked Revenue Drivers:** Discovered that specific payment behaviors (Credit Cards) correlate with a **~21 BRL increase** in Average Order Value (AOV).
 * **Optimized Decision-Making:** Developed a unified Business Intelligence layer that tracks **5+ real-time KPIs**, reducing the time required for executive performance reviews.
+* **Enabled Predictive Retention Targeting:** Built a churn prediction framework capable of identifying 12K+ high-risk customers and supporting simulated retention intervention strategies.
 
 ### 💡 Strategic Recommendations
 1.  **Pivot to Retention Marketing:** Shift budget from cold acquisition to loyalty-driven campaigns (e.g., personalized "Welcome Back" offers) to convert the 96% one-time buyer base into repeat customers.
@@ -121,6 +143,8 @@ This project demonstrates that **Data Analytics is not just about counting thing
 * 💳 **Identify** the specific customer behaviors that drive higher revenue.
 * 🛠️ **Build** a repeatable framework that turns raw transactional logs into a strategic roadmap.
 
+The addition of predictive churn modeling further extended the project from descriptive business intelligence into proactive customer retention analytics.
+
 ---
 
 ## 📁 Repository Structure
@@ -130,7 +154,9 @@ ecommerce-analytics-project/
 ├── data/
 │   ├── raw/                         # ignored
 │   ├── processed/
-│   │   └── master_orders_features.csv
+│   │   ├── customer_churn_modeling_dataset.csv
+│   │   ├── high_risk_customers.csv
+│   │   └── olist_master_orders_features.csv
 │   └── analytics/
 │       ├── 07_01_revenue_trend.csv
 │       ├── 07_02_delivery_performance.csv
@@ -153,7 +179,8 @@ ecommerce-analytics-project/
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_hypothesis_testing.ipynb
-│   └── 03_sql_business_analysis.ipynb
+│   ├── 03_sql_business_analysis.ipynb
+│   └── 04_churn_prediction.ipynb
 │
 ├── dashboard/
 │   ├── olist_dashboard.pbix
